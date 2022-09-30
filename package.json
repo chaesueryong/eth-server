@@ -1,0 +1,40 @@
+{
+    "name": "eth-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon --exec babel-node index.js",
+        "dev-memory": "nodemon --max-old-space-size=8192 --exec babel-node index.js",
+        "start": "cross-env NODE_ENV=production nodemon --exec babel-node index.js",
+        "pm2:start": "pm2 start ecosystem.config.js --interpreter babel-node",
+        "pm2:stop": "pm2 stop ecosystem.config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.26.1",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "helmet": "^5.0.1",
+        "jsonwebtoken": "^8.5.1",
+        "moment": "^2.29.1",
+        "moment-timezone": "^0.5.34",
+        "morgan": "^1.10.0",
+        "mysql": "^2.18.1",
+        "request-ip": "^2.1.3",
+        "typeorm": "^0.2.39",
+        "web3": "^1.6.0"
+    },
+    "devDependencies": {
+        "@babel/node": "^7.16.5",
+        "@babel/plugin-proposal-decorators": "^7.16.5",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.16.5",
+        "@babel/register": "^7.17.7",
+        "nodemon": "^2.0.15"
+    }
+}
